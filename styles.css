@@ -33,7 +33,7 @@ nav ul li a:hover {
 
 /* Hero section */
 .hero {
-  background-image: url('images/chicago-hero.png');
+  background-image: url('images/chicago-hero.jpg');
   background-size: cover;
   background-position: center;
   color: white;
