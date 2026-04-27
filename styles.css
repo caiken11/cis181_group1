@@ -1,37 +1,86 @@
-/* Reset and base styles */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+/* --------------------------------------------------
+   BASE STYLES
+-------------------------------------------------- */
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #ffffff;
   color: #333;
 }
 
+h2, h3 {
+  color: #0d47a1;
+  font-family: "Georgia", "Times New Roman", serif;
+}
+
+/* Generic container for all pages */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* --------------------------------------------------
+   HEADER
+-------------------------------------------------- */
+
 header {
-  background-color: #c62828;
-  color: white;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+}
+
+.top-header {
+  background-color: #ffffff;
   padding: 20px;
   text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.top-header h1 {
+  color: #0d47a1;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 2rem; /* FIXED invalid value */
+  margin: 0;
+}
+
+/* --------------------------------------------------
+   NAVIGATION
+-------------------------------------------------- */
+
+nav {
+  background-color: #b71c1c;
+  border-bottom: 4px solid #8e0000;
 }
 
 nav ul {
   list-style: none;
-  padding: 0;
+  margin: 0;
+  padding: 10px 0;
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 20px;
 }
 
 nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 nav ul li a:hover {
   text-decoration: underline;
 }
 
-/* Hero section */
+/* --------------------------------------------------
+   HERO (HOME PAGE ONLY)
+-------------------------------------------------- */
+
 .hero {
   background-image: url('images/chicago-hero.jpg');
   background-size: cover;
@@ -39,14 +88,48 @@ nav ul li a:hover {
   color: white;
   padding: 60px 20px;
   text-align: center;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 0;
+}
+
+.hero h2,
+.hero p {
+  position: relative;
+  z-index: 1;
+  color: white;
 }
 
 .hero h2 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
+  font-size: 2.5rem;
 }
 
-/* Teaser row */
+.hero p {
+  font-size: 1rem;
+}
+
+/* --------------------------------------------------
+   HOME PAGE TEASERS
+-------------------------------------------------- */
+
+.teasers {
+  padding: 40px 20px;
+}
+
+.teasers h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
 .teaser-row {
   display: flex;
   justify-content: space-between;
@@ -56,37 +139,151 @@ nav ul li a:hover {
 
 .teaser-row article {
   flex: 1;
-  background-color: #f2f2f2;
+  background-color: #f7f7f7;
   padding: 15px;
   border: 1px solid #ccc;
+  border-radius: 8px;
   text-align: center;
+}
+
+.teasers article img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 10px;
 }
 
 .teaser-row article a {
   display: inline-block;
   margin-top: 10px;
-  color: #c62828;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .teaser-row article a:hover {
   text-decoration: underline;
 }
 
-/* Section headings */
-section h2 {
-  margin-top: 40px;
-  text-align: center;
+.teaser-btn {
+  display: inline-block;
+  background-color: #b71c1c;
+  color: white !important;
+  padding: 10px 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 12px;
+  transition: background-color 0.2s ease;
 }
 
-/* Forms */
-form {
-  display: flex;
-  flex-direction: column;
-  max-width: 400px;
-  margin: 20px auto;
-  gap: 10px;
+.teaser-btn:hover {
+  background-color: #8e0000;
 }
+
+/* --------------------------------------------------
+   SUBPAGE SYSTEM (Pizza, Beef, Sausage, etc.)
+-------------------------------------------------- */
+
+/* Breadcrumb styled like a secondary nav bar */
+.breadcrumb {
+  background-color: #f4f4f4;       /* light gray strip */
+  border-bottom: 1px solid #ddd;   /* subtle divider */
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  margin: 0;                       /* remove spacing so it hugs the nav bar */
+}
+
+.breadcrumb a {
+  color: #0d47a1;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb span {
+  color: #333;
+}
+
+/* Page title */
+.page-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+/* Section wrapper */
+.content-section {
+  margin-bottom: 40px;
+}
+
+/* Subheadings inside sections */
+.subheading {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+/* Comparison tables for all subpages */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 0.95rem;
+}
+
+.comparison-table th {
+  background-color: #f4f4f4;
+  padding: 10px;
+  text-align: left;
+  border-bottom: 2px solid #ddd;
+  font-family: "Georgia", "Times New Roman", serif;
+}
+
+.comparison-table td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.comparison-table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+
+
+/* Lists */
+.feature-list,
+.top-spots-list {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.feature-list li,
+.top-spots-list li {
+  margin-bottom: 8px;
+}
+
+/* Two-column image layout */
+.two-col-images {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.two-col-images img {
+  width: 50%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* --------------------------------------------------
+   FORMS (Contact page, future pages)
+-------------------------------------------------- */
 
 form label {
   display: flex;
@@ -115,7 +312,10 @@ form button:hover {
   background-color: #b71c1c;
 }
 
-/* Gallery */
+/* --------------------------------------------------
+   GALLERY PAGE
+-------------------------------------------------- */
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -129,15 +329,23 @@ form button:hover {
   border-radius: 8px;
 }
 
-/* Footer */
+/* --------------------------------------------------
+   FOOTER
+-------------------------------------------------- */
+
 footer {
-  background-color: #eee;
+  background: linear-gradient(to right, #0d47a1, #b71c1c);
+  color: white;
   text-align: center;
-  padding: 15px;
+  padding: 25px 0;
   margin-top: 40px;
+  width: 100%;
 }
 
-/* Responsive tweaks */
+/* --------------------------------------------------
+   RESPONSIVE
+-------------------------------------------------- */
+
 @media (max-width: 768px) {
   .teaser-row {
     flex-direction: column;
@@ -146,5 +354,13 @@ footer {
   nav ul {
     flex-direction: column;
     align-items: center;
+  }
+
+  .two-col-images {
+    flex-direction: column;
+  }
+
+  .two-col-images img {
+    width: 100%;
   }
 }
