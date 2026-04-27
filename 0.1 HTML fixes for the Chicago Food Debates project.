@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore Chicago's greatest food rivalries — deep dish vs. thin crust, Polish vs. Chicago Dog, and wet vs. dry Italian beef. Cast your vote!">
+    <meta name="description" content="Explore Chicago's greatest food rivalries — Deep Dish vs. Thin Crust, Polish vs. Chicago Dog, and Wet vs. Dry Italian beef. Cast your vote!">
+    <meta property=""og:title" content="Chicago Food Debate">
+    <meta property="og:description" content="Explore Chicago's greatest food rivalries - Deep Dish vs. Thin Crust, Polish vs. Chicago Dog, and Wet vs. Dry Italian Beef. Cast your vote!">
+    <meta property="og:image" content="images/hero.jpg">
     <title>Chicago Food Debates</title>
+    <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
 <header>
     <h1>Chicago Food Debates</h1>
     <nav aria-label="Main navigation">
@@ -21,28 +26,28 @@
         </ul>
     </nav>
 </header>
-<main>
+<main id="main-content">
     <section class="hero" aria-label="Hero banner">
-        <img src="images/hero.jpg" alt="A spread of iconic Chicago foods including deep dish pizza and Italian beef">
+        <img src="images/hero.jpg" alt="Chicago's iconic foods including Deep dish pizza and Italian beef">
         <h2>Settle It Once and For All</h2>
         <p>Explore Chicago's greatest food rivalries and cast your vote.</p>
     </section>
     <section class="teasers">
         <h2>Featured Debates</h2>
         <article>
-            <h3>Thin Crust vs. Deep Dish</h3>
+            <h3><a href="pizza.html">Thin Crust vs. Deep Dish</a></h3>
             <p>A battle of styles that defines Chicago pizza culture.</p>
-            <a href="pizza.html" aria-label="Explore the Pizza Debate">Explore the Pizza Debate</a>
+            <a href="pizza.html" aria-label="Explore the Pizza Debate" class="btn">Explore the Pizza Debate</a>
         </article>
         <article>
-            <h3>Polish vs. Chicago Dog</h3>
+            <h3><a href="sausage.html">Polish vs. Chicago Dog</a></h3>
             <p>Two iconic sausages, one legendary city.</p>
-            <a href="sausage.html" aria-label="Explore the Sausage Debate">Explore the Sausage Debate</a>
+            <a href="sausage.html" aria-label="Explore the Sausage Debate" class"btn">Explore the Sausage Debate</a>
         </article>
         <article>
-            <h3>Wet vs. Dry Italian Beef</h3>
+            <h3><a href="beef.html">Wet vs. Dry Italian Beef</a></h3>
             <p>How do you take your beef?</p>
-            <a href="beef.html" aria-label="Explore the Beef Debate">Explore the Beef Debate</a>
+            <a href="beef.html" aria-label="Explore the Beef Debate" class="btn">Explore the Beef Debate</a>
         </article>
     </section>
 </main>
