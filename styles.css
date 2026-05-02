@@ -8,12 +8,12 @@ body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   background-color: #ffffff;
-  color: #333;
+  color: var(--text-dark);
 }
 
 h2, h3 {
-  color: #0d47a1;
-  font-family: "Georgia", "Times New Roman", serif;
+  color: var(--primary-blue);
+  font-family: Georgia, "Times New Roman", serif;
 }
 
 /* Generic container for all pages */
@@ -41,9 +41,9 @@ header {
 }
 
 .top-header h1 {
-  color: #0d47a1;
-  font-family: "Georgia", "Times New Roman", serif;
-  font-size: 2rem; /* FIXED invalid value */
+  color: var(--primary-blue);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2rem;
   margin: 0;
 }
 
@@ -52,8 +52,8 @@ header {
 -------------------------------------------------- */
 
 nav {
-  background-color: #b71c1c;
-  border-bottom: 4px solid #8e0000;
+  background-color: var(--primary-red);
+  border-bottom: 4px solid var(--dark-red);
 }
 
 nav ul {
@@ -73,8 +73,12 @@ nav ul li a {
   letter-spacing: 0.5px;
 }
 
+nav ul li {
+   margin: 0;
+}
+
 nav ul li a:hover {
-  text-decoration: underline;
+   color: #ffd54f;
 }
 
 /* --------------------------------------------------
@@ -106,7 +110,6 @@ nav ul li a:hover {
 .hero p {
   position: relative;
   z-index: 1;
-  color: white;
 }
 
 .hero h2 {
@@ -146,7 +149,7 @@ nav ul li a:hover {
   text-align: center;
 }
 
-.teasers article img {
+.teaser-row article img {
   width: 100%;
   height: 180px;
   object-fit: cover;
@@ -187,7 +190,7 @@ nav ul li a:hover {
 
 /* Breadcrumb styled like a secondary nav bar */
 .breadcrumb {
-  background-color: #f4f4f4;       /* light gray strip */
+  background-color: var(--light-gray);
   border-bottom: 1px solid #ddd;   /* subtle divider */
   padding: 8px 20px;
   font-size: 0.9rem;
@@ -222,10 +225,9 @@ nav ul li a:hover {
 
 /* Subheadings inside sections */
 .subheading {
-  font-family: "Georgia", "Times New Roman", serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 1.2rem;
-  margin-top: 20px;
-  margin-bottom: 8px;
+  margin: 20px 0 8px;
 }
 
 /* Comparison tables for all subpages */
@@ -237,11 +239,11 @@ nav ul li a:hover {
 }
 
 .comparison-table th {
-  background-color: #f4f4f4;
+  background-color: var(--light-gray);
   padding: 10px;
   text-align: left;
   border-bottom: 2px solid #ddd;
-  font-family: "Georgia", "Times New Roman", serif;
+  font-family: Georgia, "Times New Roman", serif;
 }
 
 .comparison-table td {
@@ -300,7 +302,7 @@ form textarea {
 }
 
 form button {
-  background-color: #c62828;
+  background-color: var(--primary-red);
   color: white;
   border: none;
   padding: 10px;
@@ -309,11 +311,11 @@ form button {
 }
 
 form button:hover {
-  background-color: #b71c1c;
+  background-color: var(--dark-red);
 }
 
 /* --------------------------------------------------
-   GALLERY PAGE
+   GALLERY 
 -------------------------------------------------- */
 
 .gallery {
@@ -325,7 +327,6 @@ form button:hover {
 
 .gallery img {
   width: 100%;
-  height: auto;
   border-radius: 8px;
 }
 
@@ -334,7 +335,7 @@ form button:hover {
 -------------------------------------------------- */
 
 footer {
-  background: linear-gradient(to right, #0d47a1, #b71c1c);
+  background: linear-gradient(to right, var(--primary-blue), var(--primary-red));
   color: white;
   text-align: center;
   padding: 25px 0;
@@ -343,7 +344,7 @@ footer {
 }
 
 /* --------------------------------------------------
-   RESPONSIVE
+   RESPONSIVE DESIGN
 -------------------------------------------------- */
 
 @media (max-width: 768px) {
@@ -355,6 +356,10 @@ footer {
     flex-direction: column;
     align-items: center;
   }
+
+   nav ul li {
+      margin: 8px 0;
+   }
 
   .two-col-images {
     flex-direction: column;
