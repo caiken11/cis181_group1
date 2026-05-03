@@ -43,7 +43,7 @@ header {
 .top-header h1 {
   color: #0d47a1;
   font-family: "Georgia", "Times New Roman", serif;
-  font-size: 2rem; /* FIXED invalid value */
+  font-size: 2rem;
   margin: 0;
 }
 
@@ -56,15 +56,23 @@ nav {
   border-bottom: 4px solid #8e0000;
 }
 
+/* Main nav layout */
 nav ul {
   list-style: none;
   margin: 0;
   padding: 10px 0;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 40px; /* more breathing room between items */
 }
 
+/* Each nav item becomes a positioning anchor */
+nav ul li {
+  position: relative;
+  padding: 0 10px; /* increases hover area and stabilizes dropdown */
+}
+
+/* Main nav links */
 nav ul li a {
   color: white;
   text-decoration: none;
@@ -75,6 +83,45 @@ nav ul li a {
 
 nav ul li a:hover {
   text-decoration: underline;
+}
+
+/* --------------------------------------------------
+   FOOD DEBATES DROPDOWN (ORDERED LIST)
+-------------------------------------------------- */
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  list-style: none;        /* hide default numbers */
+  background-color: #b71c1c;
+  padding: 10px 0;
+  margin: 0;
+  min-width: 180px;
+  z-index: 1000;
+}
+
+.has-dropdown:hover .dropdown {
+  display: block;
+}
+
+.dropdown li {
+  padding: 8px 15px;
+}
+
+.dropdown li:hover {
+  background-color: #8e0000;
+}
+
+.dropdown li a {
+  color: white;
+  text-decoration: none;
+  text-transform: none;
+  display: block;
+  white-space: nowrap;
+  font-weight: normal;
 }
 
 /* --------------------------------------------------
@@ -185,33 +232,10 @@ nav ul li a:hover {
    SUBPAGE SYSTEM (Pizza, Beef, Sausage, etc.)
 -------------------------------------------------- */
 
-/* Breadcrumb styled like a secondary nav bar */
-.breadcrumb {
-  background-color: #f4f4f4;       /* light gray strip */
-  border-bottom: 1px solid #ddd;   /* subtle divider */
-  padding: 8px 20px;
-  font-size: 0.9rem;
-  margin: 0;                       /* remove spacing so it hugs the nav bar */
-}
-
-.breadcrumb a {
-  color: #0d47a1;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.breadcrumb a:hover {
-  text-decoration: underline;
-}
-
-.breadcrumb span {
-  color: #333;
-}
-
 /* Page title */
 .page-title {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.6rem;
   margin-bottom: 30px;
 }
 
@@ -328,6 +352,15 @@ form button:hover {
   height: auto;
   border-radius: 8px;
 }
+
+.about-video {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 6px;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
 
 /* --------------------------------------------------
    FOOTER
