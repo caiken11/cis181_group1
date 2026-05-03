@@ -56,15 +56,23 @@ nav {
   border-bottom: 4px solid #8e0000;
 }
 
+/* Main nav layout */
 nav ul {
   list-style: none;
   margin: 0;
   padding: 10px 0;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 40px; /* more breathing room between items */
 }
 
+/* Each nav item becomes a positioning anchor */
+nav ul li {
+  position: relative;
+  padding: 0 10px; /* increases hover area and stabilizes dropdown */
+}
+
+/* Main nav links */
 nav ul li a {
   color: white;
   text-decoration: none;
@@ -76,6 +84,46 @@ nav ul li a {
 nav ul li a:hover {
   text-decoration: underline;
 }
+
+/* --------------------------------------------------
+   FOOD DEBATES DROPDOWN (ORDERED LIST)
+-------------------------------------------------- */
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  list-style: none;        /* hide default numbers */
+  background-color: #b71c1c;
+  padding: 10px 0;
+  margin: 0;
+  min-width: 180px;
+  z-index: 1000;
+}
+
+.has-dropdown:hover .dropdown {
+  display: block;
+}
+
+.dropdown li {
+  padding: 8px 15px;
+}
+
+.dropdown li:hover {
+  background-color: #8e0000;
+}
+
+.dropdown li a {
+  color: white;
+  text-decoration: none;
+  text-transform: none;
+  display: block;
+  white-space: nowrap;
+  font-weight: normal;
+}
+
 
 /* --------------------------------------------------
    HERO (HOME PAGE ONLY)
