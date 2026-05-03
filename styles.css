@@ -339,19 +339,32 @@ form button:hover {
 /* --------------------------------------------------
    GALLERY PAGE
 -------------------------------------------------- */
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-  padding: 20px;
+.fan-favorites {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;   /* allows stacking on small screens */
+    margin-bottom: 20px;
 }
 
-.gallery img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
+.favorite {
+    flex: 1 1 300px;
+    text-align: center;
 }
+
+.debate-section h2,
+.debate-section h3 {
+    text-align: center;
+}
+
+.restaurant-logo {
+    max-width: 400px;   /* or 120px, 100px — whatever looks right */
+    max-height: 400px;
+    object-fit: contain;
+    }
+
+
+
+
 
 .about-video {
     width: 100%;
