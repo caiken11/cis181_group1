@@ -43,7 +43,7 @@ header {
 .top-header h1 {
   color: #0d47a1;
   font-family: "Georgia", "Times New Roman", serif;
-  font-size: 2rem; /* FIXED invalid value */
+  font-size: 2rem;
   margin: 0;
 }
 
@@ -235,7 +235,7 @@ nav ul li a:hover {
 /* Page title */
 .page-title {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.6rem;
   margin-bottom: 30px;
 }
 
@@ -352,6 +352,15 @@ form button:hover {
   height: auto;
   border-radius: 8px;
 }
+
+.about-video {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 6px;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
 
 /* --------------------------------------------------
    FOOTER

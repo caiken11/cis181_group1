@@ -50,30 +50,28 @@
                 </ol>
             </li>
             <li><a href="gallery.html">Media Gallery</a></li>
-            <li><a href="contact.html">Contact & About</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 </header>
 
-
- <div class="container">
- 
-		<section class="content-section">
-         <h2 class="page-title"> About Chicago Food Debate</h2>
-        <p>
-            Welcome to Chicago Food Debate, the ultimate arena for the city’s most delicious controversies. 
-			From the age-old battle of deep dish versus thin crust to the strictly forbidden act of putting ketchup on a hot dog, 
-			we are dedicated to dissecting the flavors that define the Windy City. Our mission is to fuel a community of passionate 
-			foodies, chefs, and casual diners through spirited rankings, neighborhood guides, and deep dives into Chicago’s culinary 
-			heritage. Whether you’re a lifelong local defending your favorite Italian beef or a curious visitor looking for the best 
-			tavern-style slice, we invite you to take a seat at the table and join the conversation.
-		</p>
-		</section>
-</div>	
-
 <main>
         <section>
-            <h2 class="page-title">Tell Us What You Think</h2> 
+            <h2 class="page-title">Tell Us What You Think</h2>
+
+            <article>
+                <p>
+                    Discovered the next great restaurant to feature on Chicago Food Debates? Tell us all about it! Send us a video or photo of your discovery.
+                </p>
+            </article>
+
+            <div class="contact-video-wrapper">
+                <video class="about-video" autoplay muted loop playsinline>
+                    <source src="images/kid-eating-pizza.mp4" type="video/mp4">
+                </video>
+            </div>
+
             <article>
                 
                 <form id="contactForm" action="/submit-quote" method="POST" enctype="multipart/form-data">
@@ -92,7 +90,7 @@
                     <label for="itemInfo">Tell Us About Your Experience:</label>
                     <textarea id="itemInfo" name="itemInfo" **rows="8"**  placeholder="Tell Us About Your Experience!"></textarea>
                     
-                    <label for="fileUpload">Want to share an Image for our news letter?(Optional):</label>
+                    <label for="fileUpload">Want to share an image for our newsletter? (Optional):</label>
                     <input type="file" id="fileUpload" name="designFile" accept=".jpg, .png, .heic ">
                     <small>Accepted file types: PNG, JPG, HEIC(iPhone)</small>
                     
