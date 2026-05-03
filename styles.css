@@ -124,7 +124,6 @@ nav ul li a:hover {
   font-weight: normal;
 }
 
-
 /* --------------------------------------------------
    HERO (HOME PAGE ONLY)
 -------------------------------------------------- */
@@ -232,29 +231,6 @@ nav ul li a:hover {
 /* --------------------------------------------------
    SUBPAGE SYSTEM (Pizza, Beef, Sausage, etc.)
 -------------------------------------------------- */
-
-/* Breadcrumb styled like a secondary nav bar */
-.breadcrumb {
-  background-color: #f4f4f4;       /* light gray strip */
-  border-bottom: 1px solid #ddd;   /* subtle divider */
-  padding: 8px 20px;
-  font-size: 0.9rem;
-  margin: 0;                       /* remove spacing so it hugs the nav bar */
-}
-
-.breadcrumb a {
-  color: #0d47a1;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.breadcrumb a:hover {
-  text-decoration: underline;
-}
-
-.breadcrumb span {
-  color: #333;
-}
 
 /* Page title */
 .page-title {
