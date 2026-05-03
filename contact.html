@@ -2,9 +2,121 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css"/>
+	<link href="contactStyle.css" rel="stylesheet" />
+
+
+<!--
+  Including the JS in the webpage to cut down on files
+    -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); 
+
+                const nameInput = document.getElementById('name').value;
+                
+                if (nameInput === "") {
+                    alert("Please enter your name before submitting.");
+                    return; 
+                }
+                
+                alert("Thank you!");
+            });
+        });
+    </script>
+    
 </head>
+    
 <body>
+
+<header>
+    <div class="top-header">
+        <h1>Chicago Food Debates</h1>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="has-dropdown">
+                <a href="#">Food Debates</a>
+                <ol class="dropdown">
+                    <li><a href="pizza.html">1. Pizza Debate</a></li>
+                    <li><a href="sausage.html">2. Sausage Debate</a></li>
+                    <li><a href="beef.html">3. Beef Debate</a></li>
+                </ol>
+            </li>
+            <li><a href="gallery.html">Media Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+        <section>
+            <h2 class="page-title">Tell Us What You Think</h2>
+
+            <article>
+                <p>
+                    Discovered the next great restaurant to feature on Chicago Food Debates? Tell us all about it! Send us a video or photo of your discovery.
+                </p>
+            </article>
+
+            <div class="contact-video-wrapper">
+                <video class="about-video" autoplay muted loop playsinline>
+                    <source src="images/kid-eating-pizza.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <article>
+                
+                <form id="contactForm" action="/submit-quote" method="POST" enctype="multipart/form-data">
+                    
+                    <p>The Chicago Food Debates Team would love to hear about your Chicago food experiences or answer any questions you may have.</p>
+
+                    <label for="name">Name:*</label>
+                    <input type="text" id="name" name="name" required aria-required="true">
+                    
+                    <label for="email">Email Address:*</label>
+                    <input type="email" id="email" name="email" required aria-required="true">
+                    
+                    <label for="phone">Phone Number (Optional):</label>
+                    <input type="tel" id="phone" name="phone">
+                    
+                    <label for="itemInfo">Tell Us About Your Experience:</label>
+                    <textarea id="itemInfo" name="itemInfo" **rows="8"**  placeholder="Tell Us About Your Experience!"></textarea>
+                    
+                    <label for="fileUpload">Want to share an image for our newsletter? (Optional):</label>
+                    <input type="file" id="fileUpload" name="designFile" accept=".jpg, .png, .heic ">
+                    <small>Accepted file types: PNG, JPG, HEIC(iPhone)</small>
+                    
+					<label for="subscribe">Subscribe to newsletter</label>
+					<input type="checkbox" id="subscribe" name="subscribe" value="newsletter">
+					<p> * is required information  </p> <!--this is here on purpose -->
+					
+					
+                    <button type="submit">**Submit**</button>
+                    
+                </form>
+
+            </article>
+            
+            <aside>
+                
+            </aside>
+        </section>
+</main>   
+
+
+<footer>
+    <p>© 2026 Chicago Food Debates</p>
+</footer>
+
+
 
 </body>
 </html>
