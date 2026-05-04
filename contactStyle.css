@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 /*
      
    Author:   jacob etheredge
@@ -10,56 +9,55 @@
    formatting for the form on the contact webpage
  */
 
-        main {
-            padding-top: 30px; 
-        }
-        
-       
-        main article {
-            text-align: center;
-        }
+main {
+    padding-top: 30px;
+}
 
-        #contactForm {
-            display: inline-block;
-            text-align: left; 
-            max-width: 800px;
-            padding: 20px; 
-            background-color: #f4f4f4; 
-            border-radius: 8px;
-        }
+main article {
+    text-align: center;
+}
 
-        #contactForm label {
-            display: block;
-            text-align: left;
-            margin-top: 15px; 
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
+#contactForm {
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+}
 
-        #contactForm small {
-            display: block;
-            text-align: left;
-            margin-bottom: 15px;
-        }
+#contactForm label {
+    display: block;
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
 
-        #contactForm input[type="text"],
-        #contactForm input[type="email"],
-        #contactForm input[type="tel"],
-        #contactForm textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            margin-bottom: 0;
-        }
-        
-        br {
-            display: none;
-        }
+#contactForm small {
+    display: block;
+    text-align: left;
+    margin-bottom: 15px;
+}
 
-        #contactForm button[type="submit"] {
-            margin-top: 25px;
-            font-weight: bold; 
-        }
-        
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm input[type="tel"],
+#contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 0;
+}
+
+#contactForm br {
+    display: none;
+}
+
+#contactForm button[type="submit"] {
+    margin-top: 25px;
+    font-weight: bold;
+}
