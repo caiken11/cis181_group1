@@ -2,110 +2,160 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse Chicago's top-rated restaurants for deep dish pizza, tavern-style pizza, Chicago-style hot dogs, Maxwell Street Polish, and Italian beef.">
     <title>Restaurants Gallery</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-
 <header>
     <div class="top-header">
         <h1>Chicago Food Debates</h1>
     </div>
-
-    <nav>
+    <nav aria-label="Main navigation">
         <ul>
             <li><a href="index.html">Home</a></li>
-            
             <li class="has-dropdown">
                 <a href="#">Food Debates</a>
                 <ul class="dropdown">
-                    <li><a href="pizza.html">1. Pizza Debate</a></li>
-                    <li><a href="sausage.html">2. Sausage Debate</a></li>
-                    <li><a href="beef.html">3. Beef Debate</a></li>
+                    <li><a href="pizza.html">Pizza Debate</a></li>
+                    <li><a href="sausage.html">Sausage Debate</a></li>
+                    <li><a href="beef.html">Beef Debate</a></li>
                 </ul>
             </li>
-            
             <li><a href="gallery.html">Restaurants</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 </header>
-    
-<div class="container restaurants-page">
+<main>
+    <div class="container restaurants-page">
 
-    <!-- PIZZA DEBATE -->
-    <section class="debate-section">
-        <h2>Pizza Debate</h2>
+        <!-- Educational Disclaimer -->
+        <section class="disclaimer-section">
+            <p class="video-disclaimer">
+                <strong>Educational Use Disclaimer:</strong> All videos embedded on this page are sourced
+                from YouTube and remain the intellectual property of their respective creators and copyright
+                holders. These videos are embedded solely for educational and informational purposes as part
+                of an academic project. No copyright infringement is intended. If you are a rights holder
+                and have concerns, please contact us via the
+                <a href="contact.html">Contact page</a>.
+            </p>
+        </section>
 
-        <div class="fan-favorites">
-            <div class="favorite">
-                <h3>Deep Dish Fan Favorite</h3>
-                <a href="https://www.loumalnatis.com/" target="_blank">
-                    <img src="images/lou-malnatis-logo.jpg" alt="Deep Dish Fan Favorite Logo" class="restaurant-logo">
-                </a>
+        <!-- PIZZA DEBATE -->
+        <section class="debate-section">
+            <h2>Pizza Debate</h2>
+            <div class="fan-favorites">
+                <div class="favorite">
+                    <h3>Deep Dish Fan Favorite</h3>
+                    <a href="https://www.loumalnatis.com/" target="_blank">
+                        <img src="images/lou-malnatis-logo.jpg" alt="Deep Dish Fan Favorite Logo" class="restaurant-logo">
+                    </a>
+                </div>
+                <div class="favorite">
+                    <h3>Tavern-Style Fan Favorite</h3>
+                    <a href="https://www.vitoandnicks.com/index.php" target="_blank">
+                        <img src="images/VitoAndNick_logo.png" alt="Tavern Style Fan Favorite Logo" class="restaurant-logo">
+                    </a>
+                </div>
             </div>
-
-            <div class="favorite">
-                <h3>Tavern-Style Fan Favorite</h3>
-                <a href="https://www.vitoandnicks.com/index.php" target="_blank">
-                    <img src="images/VitoAndNick_logo.png" alt="Tavern Style Fan Favorite Logo" class="restaurant-logo">
-                </a>
+            <div class="video-section">
+                <h3>Watch: How Chicago Deep-Dish Pizza Is Made</h3>
+                <div class="video-wrapper">
+                    <iframe
+                        src="https://www.youtube-nocookie.com/embed/Ris0udk2C84?rel=0&modestbranding=1"
+                        title="How to Make Chicago Deep-Dish Pizza from The Bear | Binging with Babish"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <p class="video-caption">
+                    Video: <a href="https://www.youtube.com/watch?v=Ris0udk2C84" target="_blank">"How to Make Chicago Deep-Dish Pizza from The Bear"</a>
+                    by <a href="https://www.youtube.com/@babish" target="_blank">Binging with Babish</a>.
+                    Embedded for educational purposes only. All rights belong to the original creator.
+                </p>
             </div>
-        </div>
-    </section>
+        </section>
 
-
-    <!-- SAUSAGE DEBATE -->
-    <section class="debate-section">
-        <h2>Sausage Debate</h2>
-
-        <div class="fan-favorites">
-            <div class="favorite">
-                <h3>Chicago Dog Fan Favorite</h3>
-                <a href="https://www.geneandjudes.com/" target="_blank">
-                    <img src="images/gene-judy-logo.png" alt="Grilled Sausage Fan Favorite Logo" class="restaurant-logo">
-                </a>
+        <!-- SAUSAGE DEBATE -->
+        <section class="debate-section">
+            <h2>Sausage Debate</h2>
+            <div class="fan-favorites">
+                <div class="favorite">
+                    <h3>Chicago Dog Fan Favorite</h3>
+                    <a href="https://www.geneandjudes.com/" target="_blank">
+                        <img src="images/gene-judy-logo.png" alt="Grilled Sausage Fan Favorite Logo" class="restaurant-logo">
+                    </a>
+                </div>
+                <div class="favorite">
+                    <h3>Maxwell Street Fan Favorite</h3>
+                    <a href="http://jimsoriginal.com/" target="_blank">
+                        <img src="images/logo-2019.png" alt="Charred Sausage Fan Favorite Logo" class="restaurant-logo">
+                    </a>
+                </div>
             </div>
-
-            <div class="favorite">
-                <h3>Maxwell Street Fan Favorite</h3>
-                <a href="http://jimsoriginal.com/" target="_blank">
-                    <img src="images/logo-2019.png" alt="Charred Sausage Fan Favorite Logo" class="restaurant-logo">
-                </a>
+            <div class="video-section">
+                <h3>Watch: Why Is a Chicago Hot Dog "Dragged Through the Garden"?</h3>
+                <div class="video-wrapper">
+                    <iframe
+                        src="https://www.youtube-nocookie.com/embed/T37obpzZ52o?rel=0&modestbranding=1"
+                        title="Why Is A Chicago Hot Dog Dragged Through The Garden?"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <p class="video-caption">
+                    Video: <a href="https://www.youtube.com/watch?v=T37obpzZ52o" target="_blank">"Why Is A Chicago Hot Dog 'Dragged Through The Garden'?"</a>
+                    via <a href="https://www.youtube.com/@WhatToKnowAboutChicago" target="_blank">What To Know About Chicago</a>.
+                    Embedded for educational purposes only. All rights belong to the original creator.
+                </p>
             </div>
-        </div>
-    </section>
+        </section>
 
-
-    <!-- BEEF DEBATE -->
-    <section class="debate-section">
-        <h2>Italian Beef Debate</h2>
-
-        <div class="fan-favorites">
-            <div class="favorite">
-                <h3>Dry Fan Favorite</h3>
-                <a href="https://www.theoriginalmrbeef.com/" target="_blank">
-                    <img src="images/MrBeefLogo.png" alt="Dry Beef Fan Favorite Logo" class="restaurant-logo">
-                </a>
+        <!-- BEEF DEBATE -->
+        <section class="debate-section">
+            <h2>Italian Beef Debate</h2>
+            <div class="fan-favorites">
+                <div class="favorite">
+                    <h3>Dry Fan Favorite</h3>
+                    <a href="https://www.theoriginalmrbeef.com/" target="_blank">
+                        <img src="images/MrBeefLogo.png" alt="Dry Beef Fan Favorite Logo" class="restaurant-logo">
+                    </a>
+                </div>
+                <div class="favorite">
+                    <h3>Wet Fan Favorite</h3>
+                    <a href="https://ricobenespizza.com/" target="_blank">
+                        <img src="images/ricobene-logo.png" alt="Wet Beef Fan Favorite Logo" class="restaurant-logo">
+                    </a>
+                </div>
             </div>
-
-            <div class="favorite">
-                <h3>Wet Fan Favorite</h3>
-                <a href="https://ricobenespizza.com/" target="_blank">
-                    <img src="images/ricobene-logo.png" alt="Wet Beef Fan Favorite Logo" class="restaurant-logo">
-                </a>
+            <div class="video-section">
+                <h3>Watch: Johnnie's Iconic Italian Beef — A Delicious Mess</h3>
+                <div class="video-wrapper">
+                    <iframe
+                        src="https://www.youtube-nocookie.com/embed/nojaKlA7MoU?rel=0&modestbranding=1"
+                        title="Johnnie's Iconic Italian Beef Is A Delicious Mess Of Beef And Gravy | Legendary Eats | Insider Food"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <p class="video-caption">
+                    Video: <a href="https://www.youtube.com/watch?v=nojaKlA7MoU" target="_blank">"Johnnie's Iconic Italian Beef Is A Delicious Mess Of Beef And Gravy"</a>
+                    by <a href="https://www.youtube.com/@InsiderFood" target="_blank">Insider Food</a>.
+                    Embedded for educational purposes only. All rights belong to the original creator.
+                </p>
             </div>
-        </div>
-    </section>
+        </section>
 
-</div>
-
+    </div>
+</main>
 <footer>
-    <p>&copy;© 2026 Chicago Food Debates</p>
+    <p>&copy; 2026 Chicago Food Debates</p>
 </footer>
-
 </body>
 </html>
